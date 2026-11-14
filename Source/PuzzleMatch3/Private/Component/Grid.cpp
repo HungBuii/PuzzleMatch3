@@ -97,8 +97,8 @@ ATile* AGrid::CreateTile(TSubclassOf<class ATile> TileToSpawn, class UMaterialIn
 			// Spawn the tile.
 			ATile* const NewTile = World->SpawnActor<ATile>(TileToSpawn, SpawnLocation, SpawnRotation, SpawnParams);
 			NewTile->GetRenderComponent()->SetMobility(EComponentMobility::Movable);
-			GameTiles[SpawnGridAddress] = NewTile;
 			NewTile->SetTileMaterial(TileMaterial);
+			GameTiles[SpawnGridAddress] = NewTile;
 			NewTile->Index = SpawnGridAddress; // test
 			return NewTile;
 		}
