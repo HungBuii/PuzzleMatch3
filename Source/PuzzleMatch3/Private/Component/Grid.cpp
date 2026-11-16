@@ -28,7 +28,8 @@ void AGrid::InitGrid()
 			GetGridAddressWithOffset(0, Column, Row, GridAddress);
 			SpawnLocation = GetLocationFromGridAddress(GridAddress);
 			
-			CreateTile(TileLibrary[0].TileClass, TileLibrary[0].TileMaterial, SpawnLocation, GridAddress, 0);
+			int32 TileID = FMath::FRandRange(0, TileLibrary.Num());
+			CreateTile(TileLibrary[TileID].TileClass, TileLibrary[TileID].TileMaterial, SpawnLocation, GridAddress, TileID);
 		}
 	}
 }
