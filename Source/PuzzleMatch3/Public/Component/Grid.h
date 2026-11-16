@@ -43,6 +43,9 @@ public:
 	/** Spawn a tile and associate it with a specific grid address. */
 	ATile* CreateTile(TSubclassOf<class ATile> TileToSpawn, class UMaterialInstanceConstant* TileMaterial, 
 		FVector SpawnLocation, int32 SpawnGridAddress, int32 TileTypeID);
+		
+	/** React to a tile being clicked. */
+	void OnTileWasSelected(ATile* NewSelectedTile);
 	
 private:
 	/** The size of a space on the grid. Does not include borders or spacing between tiles. */

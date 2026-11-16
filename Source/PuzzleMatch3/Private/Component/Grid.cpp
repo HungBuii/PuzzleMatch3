@@ -107,4 +107,9 @@ ATile* AGrid::CreateTile(TSubclassOf<class ATile> TileToSpawn, class UMaterialIn
 	return nullptr;
 }
 
+void AGrid::OnTileWasSelected(ATile* NewSelectedTile)
+{
+	NewSelectedTile->PlaySelectionEffect(true);
+}
+
 
